@@ -1,24 +1,16 @@
 # Automatically reload when requested
   
-TODO: Supply a short overview of the functionality the extension brings to Aha! Develop
-This [Aha! Develop](https://www.aha.io/develop/overview) extension enables...
+Aha! keeps a persistent connection to the server to stream updates to the client. These updates are interrupted when the tab is hidden for a long time (e.g. when you close your laptop for the night). Aha! shows a message in the UI encouraging the user to reload the page to enable automatic updates again.
 
-It provides these contributions:
+![The "please refresh" message](res/message.png)
 
-TODO: Add a contribution list here. These should briefly describe each of the features provided by this extension.
-
-## Demo
-
-TODO: Add a short .gif screen recording showing some of the highlights of your extension. This can be recorded using a tool like [LICECap](https://www.cockos.com/licecap/).
-
-![demo](demo.gif)
+This extension uses the Page Visibility API to check for this message on the page every time a tab is focused. It automatically reloads the page if it finds it.
 
 ## Installing the extension
 
 **Note: In order to install an extension into your Aha! Develop account, you must be an account administrator.**
 
-TODO: Fill in a link to your built extension package
-Install the Automatically reload when requested extension by clicking [here](https://secure.aha.io/settings/account/extensions/install?url=).
+This extension does not provide a pre-built package. You'll need to checkout this repo and install the extension using `aha-cli`. Follow the instructions below.
 
 ## Working on the extension
 
@@ -30,9 +22,8 @@ npm install -g aha-cli
 
 Clone the repo:
 
-TODO: Add the repository URL here
 ```sh
-git clone ...
+git clone https://github.com/trydionel/auto-reload-aha
 ```
 
 **Note: In order to install an extension into your Aha! Develop account, you must be an account administrator.**
